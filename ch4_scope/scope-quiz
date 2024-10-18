@@ -1,0 +1,8 @@
+Can functions access variables declared in the global scope?
+- Yes
+
+Can code outside the scope of a function access variables that are defined inside that function?
+- No
+
+note: in python, variables are scoped to their functions definitions.
+(other langauges are scoped to blocks)

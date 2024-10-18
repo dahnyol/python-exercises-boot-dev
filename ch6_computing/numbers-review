@@ -1,0 +1,52 @@
+Numbers Review
+## Integers
+
+In Python, numbers without a decimal part are called Integers.
+
+Integers are simply whole numbers, positive or negative. For example, 3 and -3 are both examples of integers.
+Floats
+
+A float is, as you may have guessed, the number type that allows for decimal values.
+
+my_int = 5
+my_float = 5.5
+
+____ and ____ are numerical types in Python.
+
+- Integers,Floats
+
+
+## Floor division
+
+Python has great out-of-the-box support for mathematical operations. This, among other reasons, is why it has had such success in artificial intelligence, machine learning, and data science applications.
+
+Floor division is like normal division except the result is floored afterward, which means the result is rounded down to the nearest integer. The // operator is used for floor division.
+
+7 // 3
+ 2 (an integer, rounded down from 2.333)
+-7 // 3
+ -3 (an integer, rounded down from -2.333)
+
+What would be the result of 11 // 2 ?
+- 5 (an integer, rounded down from 5.5)
+
+
+## Exponents
+
+Python has built-in support for exponents - something most languages require a math library for.
+
+ reads as "three squared" or
+ "three raised to the second power"
+3 ** 2
+ 9
+
+What is 2 ** 3?
+ reads as "two cubed"
+ "two raised to the third power"
+- 8
+
+Anything raised to the 0th power is always 1
+ 1**0 = 1 
+ 2**0 = 1 
+ 5**0 = 1
+ 

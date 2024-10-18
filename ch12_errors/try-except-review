@@ -1,0 +1,55 @@
+# Try/except review
+
+try:
+  10 / 0
+except Exception as e:
+  print(e)
+
+# prints "division by zero"
+
+The try block is executed until an exception is raised or it completes, whichever happens first. In this case, a "divide by zero" error is raised because division by zero is impossible. The except block is only executed if an exception is raised in the try block. It then exposes the exception as data (e in our case) so that the program can handle the exception gracefully without crashing.
+
+
+If no exceptions are raised in the try block...
+- the except block won't execute
+
+
+If an exception is raised outside of a try block...
+- the program crashes and prints the exception
+
+
+# Additional notes:
+
+# Key Differences between the try-except block and the raise statement: 
+
+    try-except handles exceptions, while raise generates exceptions.
+    
+    try-except: is used to respond to errors, while raise is used to signal errors.
+
+    try-except: can be used without raise, but raise is usually used within a try block to allow for handling the exception. 
+
+When to Use Each:
+
+    try-except:
+    Use when you anticipate that an error might occur and want to handle it gracefully.
+    
+    raise:
+    Use when you need to explicitly signal an error condition in your code, either to stop execution or to allow the caller to handle the error.
+
+The raise statement is often used in low-level code that can detect but not handle an error. The try-except blocks are in higher-level code that calls these low-level functions and knows how to handle the errors.
+
+If an exception is raised outside of try block means that these exceptions arise outside of designated safety nets (try/except blocks). 
+
+The code continues to execute its sequence of instructions until it encounters the problematic line that triggers the exception. 
+At this point, the program does not have a predefined way to handle this exception, leading to potential risks such as data loss, security vulnerabilities, or application crashes. 
+
+Understanding the significance of encapsulating risky code within try blocks is pivotal.
+
+# Understanding Exceptions Outside of Try Blocks
+In a program written in languages like Java or Python, exceptions are problems that occur during the execution of the program. When an exception occurs in a code that is not enclosed within a try block, the exception is not caught by an exception handler and thus, it is propagated up the call stack.
+
+# Consequences of Unhandled Exceptions
+If the exception remains uncaught because there is no appropriate handler, the runtime system will then handle it. Depending on the language and runtime, this usually means the program will be terminated and an error message will be generated. The error message typically includes the type of exception, the call stack, and sometimes a description of the error.
+
+# Importance of Exception Handling
+To benefit from exception handling features, code that might throw exceptions should be enclosed in a try block followed by one or more catch blocks designed to handle specific types of exceptions. This prevents the program from crashing and allows the developer to provide a more graceful error handling mechanism.

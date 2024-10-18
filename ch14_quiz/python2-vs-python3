@@ -1,0 +1,33 @@
+# Python 2 vs Python 3
+
+One thing that's important to keep in mind as you continue your Python journey is that the Python ecosystem suffers from split personality syndrome. Python 3 was released on December 3rd, 2008, but over a decade later the web is still full of Python 2 dependencies, scripts and tutorials.
+
+In this course, we used Python 3 - just like any good citizen should these days.
+
+One of the most obvious breaking changes between Python 2 and 3 is the syntax for printing text to the console.
+Python 2
+
+print "hello world"
+
+Python 3
+
+print("hello world")
+
+Assignment
+
+Update the code from Python 2 to Python 3 syntax.
+
+- Python 2: print "python 2 really needs to die already"
+
+- Python 3: print("python 2 really needs to die already")
+
+
+Should you use Python 2 or 3?
+
+As you've probably guessed, you should always use Python 3 going forward!
+
+Python 2 and 3 are similar, but Python 3 contains significant changes that are not backward compatible with the 2.x versions.
+
+Python 3 code is always backwards compatible with Python 2
+
+- False, Python 3 contains significant changes that are not backwards compatible with the 2.x versions.

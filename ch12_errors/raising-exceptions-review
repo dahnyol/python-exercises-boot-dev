@@ -1,0 +1,61 @@
+# Raising exceptions review
+
+Software applications aren't perfect, and user input and network connectivity are far from predictable. Despite intensive debugging and unit testing, applications will still have failure cases.
+
+Loss of network connectivity, missing database rows, out of memory issues, and unexpected user inputs can all prevent an application from performing "normally". It is your job to catch and handle any and all exceptions gracefully so that your app keeps working. When you are able to detect that something is amiss, you should be raising the errors yourself, in addition to the "default" exceptions that the Python interpreter will raise.
+
+raise Exception("something bad happened")
+
+
+Which keyword triggers an exception in Python?
+- raise
+
+
+Good code doesn't need to handle errors, it should be error-free
+- False
+
+
+# Raising exceptions review
+
+As you've noticed, there are many types of exceptions. Many specific exceptions are built into the language like IndexError and ZeroDivisionError, and (almost) all Exceptions count as the parent Exception type. What differentiates exceptions are their types, not their string descriptions. This is important to know when handling errors from imported modules.
+
+If you're interested in the official documentation on all the built-in exceptions you can find a list here.
+Refer to the following code for the question
+
+try:
+    raise Exception('zero division')
+except ZeroDivisionError as e:
+    print("zero")
+
+In the code sample, what will happen?
+- The program will crash with an uncaught exception
+
+Why will the code crash with an uncaught exception? 
+ It raises a generic Exception but tries to catch a ZeroDivisionError, which is not the correct type. 
+ So, the raised Exception won't be handled, causing a crash. 
+
+
+Refer to the following code for the question
+try:
+    raise Exception('zero division')
+except ZeroDivisionError as e:
+    print("zero")
+except Exception as e:
+    print("other")
+
+In the code sample above, what will happen?
+- It will print 'other'
+
+ The Exception raised in the try block doesn't match the ZeroDivisionError in the first except, so it falls through to the next except block, which catches the general Exception type and prints "other".
+
+
+Refer to the following code for the question
+try:
+    10/0
+except Exception as e:
+    print("other")
+
+In the code sample, what will happen?
+- It will print 'other'
+
+ The expression 10/0 raises a ZeroDivisionError, which is a subclass under Exception. So, the except block catches the Exception and prints "other."
